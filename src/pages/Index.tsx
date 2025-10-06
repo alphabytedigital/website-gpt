@@ -428,11 +428,11 @@ const Index = () => {
       {/* CTA Section */}
       <section id="cta" className="relative z-10 py-24">
         <div className="container mx-auto px-4">
-          <div className="glass-card p-12 text-center hover-lift">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="glass-card p-6 md:p-12 text-center hover-lift">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Ready to Transform Your <span className="text-gradient-red">IT Operations?</span>
             </h2>
-            <p className="text-xl text-foreground/80 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-foreground/80 mb-8 max-w-3xl mx-auto">
               Let's discuss how a strategic partnership with AlphaByte can empower your business to
               achieve its next stage of growth. Your initial 30-minute discovery call is completely
               free.
@@ -440,7 +440,7 @@ const Index = () => {
             <Button
               onClick={() => setIsBookingModalOpen(true)}
               size="cta"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_30px_rgba(255,0,0,0.4)] hover:shadow-[0_0_40px_rgba(255,0,0,0.6)] transition-all duration-300"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_30px_rgba(255,0,0,0.4)] hover:shadow-[0_0_40px_rgba(255,0,0,0.6)] transition-all duration-300 h-auto whitespace-normal"
             >
               Book Your Free Discovery Call <ArrowRight className="ml-2" />
             </Button>
