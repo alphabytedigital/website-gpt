@@ -13,6 +13,7 @@ import {
   RefreshCw,
   ArrowRight,
   CheckCircle2,
+  Mail,
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
@@ -44,6 +45,12 @@ const Index = () => {
     }
   };
 
+  const getEmailLink = () => {
+    const subject = encodeURIComponent("Inquiry for AlphaByte BPO");
+    const body = encodeURIComponent("I would like to learn more about your services.");
+    return `mailto:hello@bpo.alphabyte.biz?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div className="min-h-screen relative overflow-x-hidden">
       <AnimatedBackground />
@@ -51,7 +58,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex items-center justify-center pt-20"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
         style={{
           backgroundImage: `linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.8)), url(${heroBg})`,
           backgroundSize: "cover",
@@ -75,7 +82,7 @@ const Index = () => {
               <Button
                 onClick={() => setIsBookingModalOpen(true)}
                 size="hero"
-                className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_30px_rgba(255,0,0,0.4)] hover:shadow-[0_0_40px_rgba(255,0,0,0.6)] transition-all duration-300"
+                className="w-full sm:w-auto shadow-[0_0_30px_rgba(255,0,0,0.4)] hover:shadow-[0_0_40px_rgba(255,0,0,0.6)] transition-all duration-300"
               >
                 Book a Discovery Call <ArrowRight className="ml-2" />
               </Button>
@@ -137,7 +144,7 @@ const Index = () => {
                 end-user support to proactive infrastructure management, we ensure your team's
                 productivity and business continuity, allowing you to scale fearlessly.
               </p>
-              <Link 
+              <Link
                 to="/it-process-outsourcing"
                 className="inline-flex items-center gap-2 mt-4 text-primary hover:text-primary/80 transition-colors"
               >
@@ -168,7 +175,7 @@ const Index = () => {
                 support department for your SaaS product, reducing your in-house costs by up to 70%
                 while delivering exceptional L1/L2 technical support to your customers.
               </p>
-              <Link 
+              <Link
                 to="/saas-support"
                 className="inline-flex items-center gap-2 mt-4 text-primary hover:text-primary/80 transition-colors"
               >
@@ -312,7 +319,7 @@ const Index = () => {
           </div>
 
           <div className="text-center">
-            <Link 
+            <Link
               to="/why-us"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-lg font-semibold"
             >
@@ -432,8 +439,8 @@ const Index = () => {
             </p>
             <Button
               onClick={() => setIsBookingModalOpen(true)}
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-6 text-lg shadow-[0_0_30px_rgba(255,0,0,0.4)] hover:shadow-[0_0_40px_rgba(255,0,0,0.6)] transition-all duration-300"
+              size="cta"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_30px_rgba(255,0,0,0.4)] hover:shadow-[0_0_40px_rgba(255,0,0,0.6)] transition-all duration-300"
             >
               Book Your Free Discovery Call <ArrowRight className="ml-2" />
             </Button>
